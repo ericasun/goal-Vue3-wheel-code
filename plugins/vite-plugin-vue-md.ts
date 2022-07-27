@@ -1,4 +1,7 @@
 // @ts-nocheck
+/**
+ * markdown转换成js
+ */
 import path from 'path'
 import fs from 'fs'
 import marked from 'marked'

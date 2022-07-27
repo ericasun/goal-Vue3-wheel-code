@@ -1,5 +1,7 @@
 // @ts-nocheck
-// 自定义块demo
+/**
+ *  自定义块demo
+ */ 
 import fs from 'fs'
 import {baseParse} from '@vue/compiler-core'
 
