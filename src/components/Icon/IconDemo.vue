@@ -1,6 +1,6 @@
 <template>
   <h1>Icon 图标</h1>
-  <Demo :component="Icon1Demo" />
+  <!-- <Demo :component="Icon1Demo" /> -->
 </template>
 
 <script lang="ts">
