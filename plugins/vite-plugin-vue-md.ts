@@ -27,9 +27,9 @@ export function md() {
         })
       }
     },
-    transform(code, path){ // 用于 rollup // 插件
+    transform(code, id){ // 用于 rollup // 插件
       // 获取文件后缀名
-      const fileArr = path.split('.') //根据.分割数组
+      const fileArr = id.split('.') //根据.分割数组
       const fileType = fileArr[fileArr.length -1]; //取最后一个
 
       if(/\md$/.test(fileType)){

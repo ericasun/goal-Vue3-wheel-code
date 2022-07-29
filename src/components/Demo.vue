@@ -1,6 +1,6 @@
 <template>
   <div class="demo">
-    <h2>在这里{{component.__sourceCodeTitle}}</h2>
+    <h2>{{component.__sourceCodeTitle}}</h2>
     <div class="demo-component">
       <component :is="component" />
     </div>
@@ -20,10 +20,11 @@ import 'prismjs';
 import 'prismjs/themes/prism.css'
 import {
   computed,
-  ref
+  ref,
+  defineComponent
 } from 'vue';
 const Prism = (window as any).Prism
-export default {
+export default defineComponent({
   components: {
     Button
   },
@@ -32,9 +33,6 @@ export default {
   },
   setup(props) {
     const html = computed(() => {
-      console.log('----------props.component.__sourceCode-------------')
-      console.log(props.component)
-      return
       return Prism.highlight(props.component.__sourceCode, Prism.languages.html, 'html')
     })
     const showCode = () => codeVisible.value = true
@@ -48,7 +46,7 @@ export default {
       hideCode
     }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

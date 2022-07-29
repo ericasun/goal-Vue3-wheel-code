@@ -30,7 +30,7 @@ export default {
       target: 'es2015' 
     }),
     vue({
-      include: /\.vue$/,
-    })
+      include: /\.vue$/
+    }),
   ],
 }
