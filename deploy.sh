@@ -1,6 +1,6 @@
 git rm -r --cached . &&
 git add . &&
-git commit -m "修改插件" &&
+git commit -m "update" &&
 git branch -M master &&
 git remote rm origin &&
 git remote add origin git@github.com:ericasun/goal-Vue3-wheel-code.git &&
@@ -10,6 +10,7 @@ echo "——————————success————————"
 
 rm -rf dist &&
 yarn build &&
+rollup -c &&
 cd dist &&
 git init &&
 git add . &&
