@@ -10,7 +10,6 @@ echo "——————————success————————"
 
 rm -rf dist &&
 yarn build &&
-rollup -c &&
 cd dist &&
 git init &&
 git add . &&

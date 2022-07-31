@@ -23,12 +23,12 @@
         <li>
           <router-link to="/doc/dialog">Dialog 组件</router-link>
         </li>
-        <li>
+        <!-- <li>
           <router-link to="/doc/icon">Icon 组件</router-link>
-        </li>
-        <li>
+        </li> -->
+        <!-- <li>
           <router-link to="/doc/layout">Layout 组件</router-link>
-        </li>
+        </li> -->
          <li>
           <router-link to="/doc/switch">Switch 组件</router-link>
         </li>
@@ -41,6 +41,7 @@
          <li>
           <router-link to="/doc/tooltip">Tooltip 组件</router-link> -->
         <!-- </li> -->
+        <li>未完待续</li>
       </ol>
     </aside>
     <main>
@@ -71,43 +72,34 @@ export default {
 
 <style lang="scss" scoped>
 $aside-index : 10;
-
 .layout {
   display: flex;
   flex-direction: column;
   height: 100vh;
-
   >.nav {
     flex-shrink: 0;
   }
-
   >.content {
     flex-grow: 1;
     padding-top: 60px;
     padding-left: 156px;
-
     @media (max-width: 500px) {
       padding-left: 0;
     }
   }
 }
-
 .content {
   display: flex;
-
   >aside {
     flex-shrink: 0;
   }
-
   >main {
     flex-grow: 1;
     padding: 16px;
     background: white;
   }
 }
-
 aside {
-  background: lightblue;
   width: 150px;
   padding: 16px 0;
   position: fixed;
@@ -116,27 +108,29 @@ aside {
   padding-top: 70px;
   height: 100%;
   z-index: $aside-index;
-
   >h2 {
     margin-bottom: 4px;
     padding: 0 16px;
   }
-
   >ol {
     >li {
+      text-align: center;
       >a {
         display: block;
         padding: 4px 16px;
         text-decoration: none;
       }
-
       .router-link-active {
-        background: white;
+        color: #409eff;
+        background: #409eff1a;
+        border-radius: 8px;;
+      }
+      :hover{
+        color: #409eff;
       }
     }
   }
 }
-
 main {
   overflow: auto;
 }
