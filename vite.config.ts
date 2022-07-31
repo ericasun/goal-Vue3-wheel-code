@@ -6,7 +6,6 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   base: './',
-  assetsDir: 'assets',
   plugins: [
     md(), 
     vue(),
