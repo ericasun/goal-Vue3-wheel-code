@@ -11,16 +11,15 @@
       <svg @click="showCode" v-else>
         <use xlink:href="#icon-menu"></use>
       </svg>
-       <svg>
+       <svg @click="copyCode">
         <use xlink:href="#icon-light"></use>
       </svg>
     </div>
-    <div class="demo-code" v-if="codeVisible">
+    <div class="demo-code" v-if="codeVisible" id ="demo-code">
       <pre class="language-html" v-html="html" />
     </div>
     <div @click="hideCode" v-if="codeVisible" class="demo-actions-2">隐藏源代码</div>
   </div>
-       
 </template>
 
 <script lang="ts">
@@ -47,12 +46,21 @@ export default defineComponent({
     const showCode = () => codeVisible.value = true
     const hideCode = () => codeVisible.value = false
     const codeVisible = ref(false)
+    // 设置剪贴板内容
+    const copyCode = () => {
+      navigator.clipboard.writeText(props.component.__sourceCode).then(
+         function() {
+          alert('代码复制成功')
+        }
+      );
+    }
     return {
       Prism,
       html,
       codeVisible,
       showCode,
-      hideCode
+      hideCode,
+      copyCode
     }
   }
 })

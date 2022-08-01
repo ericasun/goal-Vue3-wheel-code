@@ -100,6 +100,7 @@ $aside-index : 10;
   }
 }
 aside {
+  background: white;
   width: 150px;
   padding: 16px 0;
   position: fixed;
