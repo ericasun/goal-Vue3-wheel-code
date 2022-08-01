@@ -5,20 +5,25 @@
       <component :is="component" />
     </div>
     <div class="demo-actions">
+      <svg @click="copyCode">
+        <use xlink:href="#icon-fuzhi"></use>
+      </svg>
       <svg @click="hideCode" v-if="codeVisible">
-        <use xlink:href = "#icon-menu"></use>
+        <use xlink:href = "#icon-daima"></use>
       </svg>
       <svg @click="showCode" v-else>
-        <use xlink:href="#icon-menu"></use>
-      </svg>
-       <svg @click="copyCode">
-        <use xlink:href="#icon-light"></use>
+        <use xlink:href="#icon-daima"></use>
       </svg>
     </div>
     <div class="demo-code" v-if="codeVisible" id ="demo-code">
       <pre class="language-html" v-html="html" />
     </div>
-    <div @click="hideCode" v-if="codeVisible" class="demo-actions-2">隐藏源代码</div>
+    <div @click="hideCode" v-if="codeVisible" class="demo-actions-2">
+       <svg>
+        <use xlink:href="#icon-upTriangle"></use>
+      </svg>
+       <span>隐藏源代码</span>
+    </div>
   </div>
 </template>
 
@@ -83,11 +88,6 @@ $border-color: #d9d9d9;
     padding: 8px 16px;
     border-top: 1px dashed $border-color;
     text-align: right;
-    svg {
-      grid-area: icon;
-      width: 32px;
-      height: 32px;
-    }
   }
   &-code {
     padding: 8px 16px;
@@ -101,6 +101,12 @@ $border-color: #d9d9d9;
   &-actions-2{
     text-align: center;
     color: #909399;
+  }
+  svg {
+    grid-area: icon;
+    width: 14px;
+    height: 14px;
+    margin-left:8px;
   }
 }
 </style>
