@@ -5,7 +5,7 @@ import {defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
-  base: './',
+  base: '/<goal-Vue3-wheel>/',
   assetsDir: 'assets',
   plugins: [
     md(), 
