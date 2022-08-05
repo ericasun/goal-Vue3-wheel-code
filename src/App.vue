@@ -2,7 +2,7 @@
   <router-view />
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import {
   ref,
   provide
