@@ -3,6 +3,7 @@
     <span></span>
   </button>
 </template>
+
 <script lang="ts" setup="props, context">
 import { SetupContext } from "vue";
 declare const props: {value: boolean}

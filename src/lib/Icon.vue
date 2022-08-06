@@ -1,10 +1,9 @@
 <template>
-  <div>
+  <div class="gulu-icon">
     <svg>
       <use :xlink:href = "iconName" />
     </svg>
   </div>
-  <!-- <img :src="srcUrl" /> -->
 </template>
 
 <script lang="ts">
@@ -43,10 +42,12 @@ export default {
 </script>
 
 <style lang="scss">
-  // svg{
-  //   width: 1.4em;
-  //   height: 1.4em;
-  //   display: inline-block;
-  //   border:1px solid red;
-  // }
+.gulu-icon{
+  svg{
+    width: 1.4em;
+    height: 1.4em;
+    display: inline-block;
+    border:1px solid red;
+  }
+}
 </style>

@@ -7,8 +7,8 @@ import DialogDemo from "./components/Dialog/DialogDemo.vue";
 import TabsDemo from "./components/Tabs/TabsDemo.vue";
 import IconDemo from "./components/Icon/IconDemo.vue";
 import LayoutDemo from "./components/Layout/LayoutDemo.vue"
-// import DatepickerDemo from "./components/Datepicker/DatepickerDemo.vue";
-// import TooltipDemo from "./components/Tooltip/TooltipDemo.vue";
+import DatepickerDemo from "./components/Datepicker/DatepickerDemo.vue";
+import TooltipDemo from "./components/Tooltip/TooltipDemo.vue";
 
 import { h } from 'vue';
 import Markdown from './components/Markdown.vue';
@@ -35,8 +35,8 @@ export const router = createRouter({
         { path: "tabs", component: TabsDemo },
         { path: "icon", component: IconDemo },
         { path: "layout", component: LayoutDemo },
-        // { path: "datepicker", component: DatepickerDemo },
-        // { path: "tooltip", component: TooltipDemo },
+        { path: "datepicker", component: DatepickerDemo },
+        { path: "tooltip", component: TooltipDemo },
       ],
     },
   ],

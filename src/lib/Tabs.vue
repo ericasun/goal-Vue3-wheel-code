@@ -1,13 +1,13 @@
 <template>
-<div class="gulu-tabs">
-  <div class="gulu-tabs-nav" ref="container">
-    <div class="gulu-tabs-nav-item" v-for="(t,index) in titles" :ref="el => { if (t===selected) selectedItem = el }" @click="select(t)" :class="{selected: t=== selected}" :key="index">{{t}}</div>
-    <div class="gulu-tabs-nav-indicator" ref="indicator"></div>
+  <div class="gulu-tabs">
+    <div class="gulu-tabs-nav" ref="container">
+      <div class="gulu-tabs-nav-item" v-for="(t,index) in titles" :ref="el => { if (t===selected) selectedItem = el }" @click="select(t)" :class="{selected: t=== selected}" :key="index">{{t}}</div>
+      <div class="gulu-tabs-nav-indicator" ref="indicator"></div>
+    </div>
+    <div class="gulu-tabs-content">
+      <component :is="current" :key="current.props.title" />
+    </div>
   </div>
-  <div class="gulu-tabs-content">
-    <component :is="current" :key="current.props.title" />
-  </div>
-</div>
 </template>
 
 <script lang="ts" setup="props, context">
@@ -80,21 +80,17 @@ $border-color: #d9d9d9;
     color: $color;
     border-bottom: 1px solid $border-color;
     position: relative;
-
     &-item {
       padding: 8px 0;
       margin: 0 16px;
       cursor: pointer;
-
       &:first-child {
         margin-left: 0;
       }
-
       &.selected {
         color: $blue;
       }
     }
-
     &-indicator {
       position: absolute;
       height: 3px;
@@ -105,7 +101,6 @@ $border-color: #d9d9d9;
       transition: all 250ms;
     }
   }
-
   &-content {
     padding: 8px 0;
   }

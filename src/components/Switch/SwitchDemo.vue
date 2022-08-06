@@ -1,18 +1,37 @@
 <template>
-<div>
-  <h1>Switch 组件示例 </h1>
-  <Demo :component="Switch1Demo" />
-  <Demo :component="Switch2Demo" />
-</div>
+  <div>
+    <div>
+      <h1>Switch 组件示例 </h1>
+      <Demo :component="Switch1Demo" />
+      <Demo :component="Switch2Demo" />
+    </div>
+    <div class="gulu-switchAttributes">
+      <h1>Switch 属性</h1>
+      <table>
+        <tr>
+          <th>属性</th>
+          <th>说明</th>
+          <th>类型</th>
+          <th>可选值</th>
+          <th>默认值</th>
+        </tr>
+        <tr>
+          <td>value</td>
+          <td>值</td>
+          <td>Boolean</td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
 import Switch1Demo from '../Switch/Switch1.demo.vue'
 import Switch2Demo from '../Switch/Switch2.demo.vue'
 import Demo from '../Demo.vue'
-import {
-  ref
-} from 'vue'
+
 export default {
   components: {
     Demo
@@ -27,35 +46,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$border-color: #d9d9d9;
-
-.demo {
-  border: 1px solid $border-color;
-  margin: 16px 0 32px;
-
-  >h2 {
-    font-size: 20px;
-    padding: 8px 16px;
-    border-bottom: 1px solid $border-color;
-  }
-
-  &-component {
-    padding: 16px;
-  }
-
-  &-actions {
-    padding: 8px 16px;
-    border-top: 1px dashed $border-color;
-  }
-
-  &-code {
-    padding: 8px 16px;
-    border-top: 1px dashed $border-color;
-
-    >pre {
-      line-height: 1.1;
-      font-family: Consolas, 'Courier New', Courier, monospace;
-      margin: 0;
+.gulu-switchAttributes{
+  padding-bottom: 150px;
+  table{
+    width: 100%;
+    text-align: left;
+    padding: 5px 10px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    td, th{
+      border-bottom: 1px solid #dcdfe6;
+      padding: 8px 10px;
     }
   }
 }

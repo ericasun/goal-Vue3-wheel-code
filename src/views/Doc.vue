@@ -16,32 +16,46 @@
         </li>
       </ol>
       <h2>组件列表</h2>
+      <h3>Basic 基础组件</h3>
       <ol>
         <li>
-          <router-link to="/doc/button">Button 组件</router-link>
+          <router-link to="/doc/button">Button 按钮</router-link>
         </li>
         <li>
-          <router-link to="/doc/dialog">Dialog 组件</router-link>
+          <router-link to="/doc/icon">Icon 图标</router-link>
         </li>
-        <!-- <li>
-          <router-link to="/doc/icon">Icon 组件</router-link>
-        </li> -->
-        <!-- <li>
-          <router-link to="/doc/layout">Layout 组件</router-link>
-        </li> -->
-         <li>
+        <li>
+          <router-link to="/doc/layout">Layout 布局</router-link>
+        </li>
+      </ol>
+
+      <h3>Form 表单组件</h3>
+      <ol>
+        <li>
           <router-link to="/doc/switch">Switch 组件</router-link>
         </li>
         <li>
-          <router-link to="/doc/tabs">Tabs 组件</router-link>
-        </li>
-         <!-- <li>
           <router-link to="/doc/datepicker">Datepicker 组件</router-link>
         </li>
+      </ol>
+      
+      <h3>Data 数据展示</h3>
+
+      <h3>Navigation 导航</h3>
+      <ol>
+        <li>
+          <router-link to="/doc/tabs">Tabs 组件</router-link>
+        </li>
+      </ol>
+
+      <h3>Feedback 反馈组件</h3>
+      <ol>
+        <li>
+          <router-link to="/doc/dialog">Dialog 组件</router-link>
+        </li>
          <li>
-          <router-link to="/doc/tooltip">Tooltip 组件</router-link> -->
-        <!-- </li> -->
-        <li>未完待续</li>
+          <router-link to="/doc/tooltip">Tooltip 组件</router-link> 
+        </li>
       </ol>
     </aside>
     <main>
@@ -82,7 +96,7 @@ $aside-index : 10;
   >.content {
     flex-grow: 1;
     padding-top: 60px;
-    padding-left: 156px;
+    padding-left: 200px;
     @media (max-width: 500px) {
       padding-left: 0;
     }
@@ -101,7 +115,7 @@ $aside-index : 10;
 }
 aside {
   background: white;
-  width: 150px;
+  width: 200px;
   padding: 16px 0;
   position: fixed;
   top: 0;
@@ -109,16 +123,16 @@ aside {
   padding-top: 70px;
   height: 100%;
   z-index: $aside-index;
-  >h2 {
+  >h2, h3 {
     margin-bottom: 4px;
-    padding: 0 16px;
+    padding: 0 8px;
   }
   >ol {
     >li {
-      text-align: center;
+      text-align: left;
       >a {
         display: block;
-        padding: 4px 16px;
+        padding: 4px 18px;
         text-decoration: none;
       }
       .router-link-active {
