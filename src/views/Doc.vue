@@ -32,10 +32,10 @@
       <h3>Form 表单组件</h3>
       <ol>
         <li>
-          <router-link to="/doc/switch">Switch 组件</router-link>
+          <router-link to="/doc/switch">Switch 开头</router-link>
         </li>
         <li>
-          <router-link to="/doc/datepicker">Datepicker 组件</router-link>
+          <router-link to="/doc/datepicker">Date Picker 日期选择器</router-link>
         </li>
       </ol>
       
@@ -44,17 +44,17 @@
       <h3>Navigation 导航</h3>
       <ol>
         <li>
-          <router-link to="/doc/tabs">Tabs 组件</router-link>
+          <router-link to="/doc/tabs">Tabs 标签页</router-link>
         </li>
       </ol>
 
       <h3>Feedback 反馈组件</h3>
       <ol>
         <li>
-          <router-link to="/doc/dialog">Dialog 组件</router-link>
+          <router-link to="/doc/dialog">Dialog 对话框</router-link>
         </li>
          <li>
-          <router-link to="/doc/tooltip">Tooltip 组件</router-link> 
+          <router-link to="/doc/tooltip">Tooltip 文字提示</router-link> 
         </li>
       </ol>
     </aside>
@@ -86,6 +86,7 @@ export default {
 
 <style lang="scss" scoped>
 $aside-index : 10;
+$aside-width : 210px;
 .layout {
   display: flex;
   flex-direction: column;
@@ -96,7 +97,7 @@ $aside-index : 10;
   >.content {
     flex-grow: 1;
     padding-top: 60px;
-    padding-left: 200px;
+    padding-left: $aside-width;
     @media (max-width: 500px) {
       padding-left: 0;
     }
@@ -115,7 +116,7 @@ $aside-index : 10;
 }
 aside {
   background: white;
-  width: 200px;
+  width: $aside-width;
   padding: 16px 0;
   position: fixed;
   top: 0;

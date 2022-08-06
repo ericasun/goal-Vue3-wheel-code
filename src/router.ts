@@ -1,14 +1,14 @@
 import { createWebHashHistory, createRouter } from "vue-router";
 import Home from "./views/Home.vue";
 import Doc from "./views/Doc.vue";
-import SwitchDemo from "./components/Switch/SwitchDemo.vue";
-import ButtonDemo from "./components/Button/ButtonDemo.vue";
-import DialogDemo from "./components/Dialog/DialogDemo.vue";
-import TabsDemo from "./components/Tabs/TabsDemo.vue";
-import IconDemo from "./components/Icon/IconDemo.vue";
-import LayoutDemo from "./components/Layout/LayoutDemo.vue"
-import DatepickerDemo from "./components/Datepicker/DatepickerDemo.vue";
-import TooltipDemo from "./components/Tooltip/TooltipDemo.vue";
+import SwitchDemo from "./components/Form/Switch/SwitchDemo.vue";
+import ButtonDemo from "./components/Basic/Button/ButtonDemo.vue";
+import DialogDemo from "./components/Feedback/Dialog/DialogDemo.vue";
+import TabsDemo from "./components/Navigation/Tabs/TabsDemo.vue";
+import IconDemo from "./components/Basic/Icon/IconDemo.vue";
+import LayoutDemo from "./components/Basic/Layout/LayoutDemo.vue"
+import DatepickerDemo from "./components/Form/Datepicker/DatepickerDemo.vue";
+import TooltipDemo from "./components/Feedback/Tooltip/TooltipDemo.vue";
 
 import { h } from 'vue';
 import Markdown from './components/Markdown.vue';
