@@ -1,53 +1,48 @@
 <template>
-  <div class="gulu-icon">
-    <svg>
-      <use :xlink:href = "iconName" />
-    </svg>
-  </div>
+  <svg :class="svgClass" aria-hidden="true">
+    <use :xlink:href="iconName" :fill="color" />
+  </svg>
+  {{iconName}}
 </template>
 
-<script lang="ts">
-// 引入本地的svg文件
-// 定义一个加载目录的函数
-// const requireAll = requireContext => requireContext.keys().map(requireContext)
-//这个 require.context('我们的路径', 是否格式固定是true, 正则表达式)
-// const req = import.meta.globEager("./icons/*.svg") 
-// require.context('./icons', false, /\.svg$/) 
-
-// 加载目录下的所有的 svg 文件
-// requireAll(req)
-
-const modules = import.meta.glob('./icons/*.svg')
-
-export default {
+<script>
+import { computed, defineComponent } from 'vue'
+export default defineComponent({
   props: {
-    name:{
-      type:String,
+    iconClass: {
+      type: String,
+      required: true
+    },
+    className: {
+      type: String,
+      default: ''
+    },
+    color: {
+      type: String,
+      default: ''
     },
   },
-  // setup(){
-  //   return {
-  //     alipay,
-  //     qq,
-  //     wechat,
-  //     // srcUrl
-  //   }
-  // },
-  computed: {
-    iconName(){
-      return `#icon-${this.name}`
+  setup(props) {
+    return {
+      iconName: computed(() => `#icon-${props.iconClass}`),
+      svgClass: computed(() => {
+        if (props.className) {
+          return `svg-icon ${props.className}`
+        }
+        return 'svg-icon'
+      })
     }
   }
-}
+})
 </script>
 
-<style lang="scss">
-.gulu-icon{
-  svg{
-    width: 1.4em;
-    height: 1.4em;
-    display: inline-block;
-    border:1px solid red;
-  }
+<style scoped>
+.svg-icon {
+  width: 1em;
+  height: 1em;
+  position: relative;
+  fill: currentColor;
+  vertical-align: -2px;
+  border: 1px soild red;
 }
 </style>

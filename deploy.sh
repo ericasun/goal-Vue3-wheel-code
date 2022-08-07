@@ -1,6 +1,6 @@
 # git rm -r --cached . ||
 git add . &&
-git commit -m "修改文件结构" &&
+git commit -m "引入svg插件" &&
 git branch -M master &&
 git remote rm origin &&
 git remote add origin git@github.com:ericasun/goal-Vue3-wheel-code.git &&

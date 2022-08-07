@@ -28,7 +28,6 @@
           <router-link to="/doc/layout">Layout 布局</router-link>
         </li>
       </ol>
-
       <h3>Form 表单组件</h3>
       <ol>
         <li>
@@ -38,16 +37,13 @@
           <router-link to="/doc/datepicker">Date Picker 日期选择器</router-link>
         </li>
       </ol>
-      
       <h3>Data 数据展示</h3>
-
       <h3>Navigation 导航</h3>
       <ol>
         <li>
           <router-link to="/doc/tabs">Tabs 标签页</router-link>
         </li>
       </ol>
-
       <h3>Feedback 反馈组件</h3>
       <ol>
         <li>

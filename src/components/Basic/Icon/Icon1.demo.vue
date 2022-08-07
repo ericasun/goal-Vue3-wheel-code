@@ -4,6 +4,8 @@
 
 <template>
   <Icon name = "alipay" />
+  <Icon name = "qq" />
+  <Icon name = "wechat" />
 </template>
 
 <script lang="ts">
