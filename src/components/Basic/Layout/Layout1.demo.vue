@@ -9,7 +9,7 @@
 <script lang="ts">
 import {
   Layout,
-} from '../../../lib/index'
+} from 'lib/index'
 
 export default {
   components: {

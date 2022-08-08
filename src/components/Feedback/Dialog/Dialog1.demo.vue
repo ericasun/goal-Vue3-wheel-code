@@ -21,7 +21,7 @@
 import {
   Button,
   Dialog
-} from "../../../lib/index"
+} from "lib/index"
 import {
   ref
 } from 'vue'

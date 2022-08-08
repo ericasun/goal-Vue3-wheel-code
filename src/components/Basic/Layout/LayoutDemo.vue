@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import Demo from '../../Demo.vue';
+import Demo from 'components/Demo.vue';
 import Layout1Demo from './Layout1.demo.vue';
 
 export default {

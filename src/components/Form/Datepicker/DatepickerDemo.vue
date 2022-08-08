@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import Demo from '../../Demo.vue';
+import Demo from 'components/Demo.vue';
 import Datepicker1Demo from './Datepicker1.demo.vue';
 
 export default {

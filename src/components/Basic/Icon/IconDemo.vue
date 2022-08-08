@@ -32,8 +32,8 @@
 </template>
 
 <script lang="ts">
-import Demo from '../../Demo.vue'
-import Icon1Demo from '../Icon/Icon1.demo.vue'
+import Demo from 'components/Demo.vue'
+import Icon1Demo from './Icon1.demo.vue'
 export default {
   components: {
     Demo

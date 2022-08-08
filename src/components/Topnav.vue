@@ -17,7 +17,7 @@ import {
   inject,
   Ref
 } from "vue";
-import Icon from "../lib/Basic/Icon/Icon.vue";
+import Icon from "lib/Basic/Icon/Icon.vue";
 export default {
   components:{
     Icon

@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import Tooltip1Demo from './Tooltip1.demo.vue'
-import Demo from '../../Demo.vue'
+import Demo from 'components/Demo.vue'
 
 export default {
 components: {

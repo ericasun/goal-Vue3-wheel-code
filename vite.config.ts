@@ -19,5 +19,12 @@ export default defineConfig({
       // 执行icon name的格式
       symbolId: 'icon-[name]',
     })
-  ]
+  ],
+  resolve:{
+    alias:{
+      '@' : path.resolve(__dirname, 'src'),
+      "components": path.resolve(__dirname, "src/components"),
+      "lib": path.resolve(__dirname, "src/lib")
+    },
+  },
 });

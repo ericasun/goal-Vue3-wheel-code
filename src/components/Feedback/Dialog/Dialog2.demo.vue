@@ -12,7 +12,7 @@
 import {
   Button,
   openDialog
-} from "../../../lib/index";
+} from "lib/index";
 import {
   h
 } from 'vue'
