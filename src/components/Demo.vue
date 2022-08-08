@@ -5,23 +5,15 @@
       <component :is="component" />
     </div>
     <div class="demo-actions">
-      <svg @click="copyCode">
-        <use xlink:href="#icon-fuzhi"></use>
-      </svg>
-      <svg @click="hideCode" v-if="codeVisible">
-        <use xlink:href = "#icon-daima"></use>
-      </svg>
-      <svg @click="showCode" v-else>
-        <use xlink:href="#icon-daima"></use>
-      </svg>
+      <Icon name = "copy" @click="copyCode"/>
+      <Icon name = "code" @click="hideCode" v-if="codeVisible"/>
+      <Icon name = "code" @click="showCode" v-else/>
     </div>
     <div class="demo-code" v-if="codeVisible" id ="demo-code">
       <pre class="language-html" v-html="html" />
     </div>
     <div @click="hideCode" v-if="codeVisible" class="demo-actions-2">
-       <svg>
-        <use xlink:href="#icon-upTriangle"></use>
-      </svg>
+      <Icon name = "upTriangle" />
        <span>隐藏源代码</span>
     </div>
   </div>
@@ -29,6 +21,7 @@
 
 <script lang="ts">
 import Button from '../lib/Basic/Button.vue'
+import Icon from "../lib/Basic/Icon/Icon.vue";
 import 'prismjs';
 import 'prismjs/themes/prism.css'
 import {
@@ -39,7 +32,8 @@ import {
 const Prism = (window as any).Prism
 export default defineComponent({
   components: {
-    Button
+    Button,
+    Icon
   },
   props: {
     component: Object

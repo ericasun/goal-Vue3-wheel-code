@@ -2,18 +2,13 @@
 <div class="topnav">
   <router-link to="/" class="logo">
     <img src="../assets/logo.png"  class="icon" />
-    <!-- <svg class="icon">
-      <use xlink:href="#icon-king"></use>
-    </svg> -->
   </router-link>
   <ul class="menu">
     <li>
       <router-link to="/doc">文档</router-link>
     </li>
   </ul>
-  <svg v-if="toggleMenuButtonVisible" class="toggleAside" @click="toggleMenu">
-    <use xlink:href="#icon-menu"></use>
-  </svg>
+  <Icon name = "menu" v-if="toggleMenuButtonVisible" class="toggleAside" @click="toggleMenu" />
 </div>
 </template>
 
@@ -22,7 +17,11 @@ import {
   inject,
   Ref
 } from "vue";
+import Icon from "../lib/Basic/Icon/Icon.vue";
 export default {
+  components:{
+    Icon
+  },
   props: {
     toggleMenuButtonVisible: {
       type: Boolean,
