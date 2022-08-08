@@ -1,6 +1,7 @@
 <template>
-    <h1>Datepicker</h1>
+    <h1>Date Picker 日期选择器</h1>
     <Demo :component="Datepicker1Demo" />
+    未完待续。。。
 </template>
 
 <script lang="ts">

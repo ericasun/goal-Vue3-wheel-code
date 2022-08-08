@@ -2,18 +2,13 @@
   <svg :class="svgClass" aria-hidden="true">
     <use :xlink:href="iconName" :fill="color" />
   </svg>
-  {{iconName}}
 </template>
 
 <script>
 import { computed, defineComponent } from 'vue'
 export default defineComponent({
   props: {
-    iconClass: {
-      type: String,
-      required: true
-    },
-    className: {
+    name: {
       type: String,
       default: ''
     },
@@ -24,25 +19,24 @@ export default defineComponent({
   },
   setup(props) {
     return {
-      iconName: computed(() => `#icon-${props.iconClass}`),
+      iconName: computed(() => `#icon-${props.name}`),
       svgClass: computed(() => {
-        if (props.className) {
-          return `svg-icon ${props.className}`
+        if (props.name) {
+          return `gulu-icon ${props.name}`
         }
-        return 'svg-icon'
+        return 'gulu-icon'
       })
     }
   }
 })
 </script>
 
-<style scoped>
-.svg-icon {
-  width: 1em;
-  height: 1em;
+<style lang="scss" scoped>
+.gulu-icon {
+  width: 1.2em;
+  height: 1.2em;
   position: relative;
   fill: currentColor;
   vertical-align: -2px;
-  border: 1px soild red;
 }
 </style>

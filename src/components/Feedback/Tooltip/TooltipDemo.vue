@@ -1,6 +1,7 @@
 <template>
-    <h1>Tooltip 组件示例 </h1>
+    <h1>Tooltip 文字提示</h1>
     <Demo :component="Tooltip1Demo" />
+    未完待续。。。
 </template>
 
 <script lang="ts">
