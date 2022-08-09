@@ -7,7 +7,7 @@
 <script lang="ts" setup="context">
 import { SetupContext } from "vue";
 declare const context: SetupContext
-// @ts-ignore
+
 const props = defineProps({
   value: Boolean,
 })

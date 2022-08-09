@@ -12,10 +12,10 @@
 
 <script lang="ts" setup="context">
 import Tab from './Tab.vue'
-import { computed, ref, watchEffect, onMounted, SetupContext, Component} from 'vue'
+import { computed, ref, watchEffect, onMounted, SetupContext} from 'vue'
 
 declare const context: SetupContext
-// @ts-ignore
+
 const props = defineProps({
   selected: {
     type: String

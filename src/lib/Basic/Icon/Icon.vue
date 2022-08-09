@@ -5,7 +5,6 @@
 </template>
 
 <script lang="ts" setup>
-// @ts-ignore
 import { computed} from 'vue'
 export interface Props {
   name?: String;
@@ -16,7 +15,6 @@ const props = withDefaults(defineProps<Props>(), {
   name: '',
   color: '',
 })
-
 const iconName = computed(() => `#icon-${props.name}`)
 const svgClass = computed(() => {
   if (props.name) {

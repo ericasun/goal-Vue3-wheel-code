@@ -22,8 +22,8 @@
 </template>
 
 <script lang="ts" setup="context">
-// @ts-ignore
-import { SetupContext, withDefaults, defineProps } from 'vue';
+
+import { SetupContext } from 'vue';
 import Button from "lib/Basic/Button.vue";
 export interface Props {
   visible: boolean

@@ -27,7 +27,6 @@ import 'prismjs/themes/prism.css'
 import { computed, ref} from 'vue';
 
 const Prism = (window as any).Prism
-// @ts-ignore
 const props = defineProps({
   component: Object
 })

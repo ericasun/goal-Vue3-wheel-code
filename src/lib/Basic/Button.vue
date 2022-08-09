@@ -14,7 +14,7 @@ export interface Props {
   disabled: boolean;
   loading: boolean;
 }
-// @ts-ignore
+
 const props = withDefaults(defineProps<Props>(), {
   theme:()=> ['button', 'text', 'link'],
   size: () => ['normal', 'big','small'],
@@ -22,7 +22,6 @@ const props = withDefaults(defineProps<Props>(), {
   disabled: () => ['false', 'true'],
   loading: () => ['false', 'true'],
 })
-
 const { theme, size, level } = props;
 const classes = computed(() => {
   return {
