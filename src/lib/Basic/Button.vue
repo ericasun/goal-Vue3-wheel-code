@@ -11,8 +11,8 @@ export interface Props {
   theme?: String;
   size?: String;
   level?: String;
-  disabled: boolean;
-  loading: boolean;
+  disabled: Boolean;
+  loading: Boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -30,6 +30,7 @@ const classes = computed(() => {
     [`gulu-level-${level}`]: level,
   };
 });
+
 </script>
 <style lang="scss">
 $h: 32px;
