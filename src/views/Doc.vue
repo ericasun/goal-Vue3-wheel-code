@@ -67,7 +67,7 @@ import {
   inject,
   Ref
 } from 'vue'
-// export const menuVisible = inject < Ref < boolean >> ("menuVisible"); // get
+const menuVisible = inject < Ref < boolean >> ("menuVisible"); // get
 </script>
 
 <style lang="scss" scoped>
