@@ -31,7 +31,7 @@
       <h3>Form 表单组件</h3>
       <ol>
         <li>
-          <router-link to="/doc/switch">Switch 开头</router-link>
+          <router-link to="/doc/switch">Switch 开关</router-link>
         </li>
         <li>
           <router-link to="/doc/datepicker">Date Picker 日期选择器</router-link>
