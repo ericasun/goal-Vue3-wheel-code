@@ -22,13 +22,6 @@
   </div>
 </template>
 
-<script lang="ts">
-import {
-  Button
-} from 'lib/index'
-export default {
-  components: {
-    Button
-  }
-}
+<script lang="ts" setup>
+import {Button} from 'lib/index'
 </script>

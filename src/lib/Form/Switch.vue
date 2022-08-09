@@ -11,6 +11,7 @@ declare const context: SetupContext
 const props = defineProps({
   value: Boolean,
 })
+
 const toggle = () => {
   context.emit("update:value", !props.value);
 };

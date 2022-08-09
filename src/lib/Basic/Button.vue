@@ -30,9 +30,9 @@ const classes = computed(() => {
     [`gulu-level-${level}`]: level,
   };
 });
-
 </script>
-<style lang="scss">
+
+<style lang="scss" scope>
 $h: 32px;
 $border-color: #d9d9d9;
 $color: #333;

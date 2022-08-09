@@ -65,10 +65,9 @@ import Button2Demo from './Button2.demo.vue'
 import Button3Demo from './Button3.demo.vue'
 import Button4Demo from './Button4.demo.vue'
 import Button5Demo from './Button5.demo.vue'
-
 </script>
 
-<style lang="scss">
+<style lang="scss" scope>
 .gulu-buttonAttributes{
   padding-bottom: 150px;
   table{

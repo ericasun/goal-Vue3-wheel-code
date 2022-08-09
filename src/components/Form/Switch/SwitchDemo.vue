@@ -31,7 +31,6 @@
 import Switch1Demo from './Switch1.demo.vue'
 import Switch2Demo from './Switch2.demo.vue'
 import Demo from 'components/Demo.vue'
-
 </script>
 
 <style lang="scss" scoped>
