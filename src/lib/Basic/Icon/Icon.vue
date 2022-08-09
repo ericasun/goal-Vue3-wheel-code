@@ -4,31 +4,27 @@
   </svg>
 </template>
 
-<script>
-import { computed, defineComponent } from 'vue'
-export default defineComponent({
-  props: {
-    name: {
-      type: String,
-      default: ''
-    },
-    color: {
-      type: String,
-      default: ''
-    },
-  },
-  setup(props) {
-    return {
-      iconName: computed(() => `#icon-${props.name}`),
-      svgClass: computed(() => {
-        if (props.name) {
-          return `gulu-icon ${props.name}`
-        }
-        return 'gulu-icon'
-      })
-    }
-  }
+<script lang="ts" setup>
+// @ts-ignore
+import { computed} from 'vue'
+export interface Props {
+  name?: String;
+  color?: String;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  name: '',
+  color: '',
 })
+
+const iconName = computed(() => `#icon-${props.name}`)
+const svgClass = computed(() => {
+  if (props.name) {
+    return `gulu-icon ${props.name}`
+  }
+  return 'gulu-icon'
+})
+
 </script>
 
 <style lang="scss" scoped>

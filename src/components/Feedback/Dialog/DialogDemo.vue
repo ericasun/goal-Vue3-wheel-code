@@ -59,21 +59,10 @@
   </div>
 </template>
 
-<script lang="ts">
-import Demo from 'components/Demo.vue';
-import Dialog1Demo from './Dialog1.demo.vue';
-import Dialog2Demo from './Dialog2.demo.vue';
-export default {
-  components: {
-    Demo
-  },
-  setup() {
-    return {
-      Dialog1Demo,
-      Dialog2Demo
-    }
-  }
-}
+<script lang="ts" setup>
+import Demo from 'components/Demo.vue'
+import Dialog1Demo from './Dialog1.demo.vue'
+import Dialog2Demo from './Dialog2.demo.vue'
 
 </script>
 
@@ -93,4 +82,3 @@ export default {
   }
 }
 </style>
-

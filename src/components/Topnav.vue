@@ -13,26 +13,19 @@
 </template>
 
 <script lang="ts" setup>
-import {
-  inject,
-  Ref
-} from "vue";
-import Icon from "lib/Basic/Icon/Icon.vue";
-export default {
-  components:{
-    Icon
-  },
-  props: {
-    toggleMenuButtonVisible: {
-      type: Boolean,
-      default: false
-    }
-  },
-};
-export const menuVisible = inject < Ref < boolean >> ("menuVisible"); // get
-export const toggleMenu = () => {
-    menuVisible.value = !menuVisible.value;
-};
+import { inject, Ref } from 'vue'
+import Icon from 'lib/Basic/Icon/Icon.vue'
+
+const props = defineProps({
+  toggleMenuButtonVisible: {
+    type: Boolean,
+    default: false
+  }
+})
+const menuVisible = inject < Ref < boolean >> ('menuVisible') // get
+const toggleMenu = () => {
+  menuVisible.value = !menuVisible.value
+}
 
 </script>
 

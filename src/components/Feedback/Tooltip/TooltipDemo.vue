@@ -4,18 +4,8 @@
     未完待续。。。
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import Tooltip1Demo from './Tooltip1.demo.vue'
 import Demo from 'components/Demo.vue'
 
-export default {
-components: {
-    Demo
-  },
-  setup() {
-    return {
-      Tooltip1Demo,
-    }
-  }
-}
 </script>

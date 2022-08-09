@@ -34,14 +34,14 @@
 </template>
 
 <script lang="ts">
-import Topnav from "components/Topnav.vue";
-import Icon from "lib/Basic/Icon/Icon.vue";
+import Topnav from 'components/Topnav.vue'
+import Icon from 'lib/Basic/Icon/Icon.vue'
 export default {
   components: {
     Topnav,
     Icon
-  },
-};
+  }
+}
 </script>
 
 <style lang="scss" scoped>

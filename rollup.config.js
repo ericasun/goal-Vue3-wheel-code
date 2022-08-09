@@ -2,8 +2,8 @@
 import esbuild from 'rollup-plugin-esbuild'
 import vue from 'rollup-plugin-vue'
 import scss from 'rollup-plugin-scss'
-import dartSass from 'sass';
-import { terser } from "rollup-plugin-terser"
+import dartSass from 'sass'
+import { terser } from 'rollup-plugin-terser'
 
 export default {
   input: 'src/lib/index.ts',
@@ -26,7 +26,7 @@ export default {
     esbuild({
       include: /\.[jt]s$/,
       minify: process.env.NODE_ENV === 'production',
-      target: 'es2015' 
+      target: 'es2015'
     }),
     vue({
       include: /\.vue$/
@@ -35,12 +35,12 @@ export default {
       entries: [
         {
           find: '@', // 别名名称，作为依赖项目需要使用项目名
-          replacement: path.resolve(__dirname, 'src'), 
+          replacement: path.resolve(__dirname, 'src'),
           customResolver: resolve({
             extensions: ['.js', '.jsx', '.vue', '.sass', '.scss']
           })
         }
       ]
-    }),
-  ],
+    })
+  ]
 }

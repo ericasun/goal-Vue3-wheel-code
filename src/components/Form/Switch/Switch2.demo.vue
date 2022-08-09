@@ -15,8 +15,8 @@ import {
 } from 'vue'
 export default {
   components: {
-    Switch,
+    Switch
   }
 }
-export const bool = ref(false);
+export const bool = ref(false)
 </script>

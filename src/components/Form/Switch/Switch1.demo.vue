@@ -7,16 +7,7 @@
 </template>
 
 <script lang="ts" setup>
-import {
-  Switch
-} from 'lib/index'
-import {
-  ref
-} from 'vue'
-export default {
-  components: {
-    Switch,
-  }
-}
-export const bool = ref(false) 
+import { Switch } from 'lib/index'
+import { ref } from 'vue'
+const bool = ref(false)
 </script>

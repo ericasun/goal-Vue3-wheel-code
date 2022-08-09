@@ -8,7 +8,7 @@ import path from 'path';
 
 export default defineConfig({
   base: './',
-  assetsDir: 'assets',
+  // assetsDir: 'assets',
   plugins: [
     md(), 
     vue(),

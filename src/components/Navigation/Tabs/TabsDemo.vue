@@ -31,19 +31,10 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import Demo from 'components/Demo.vue'
 import Tabs1Demo from './Tabs1.demo.vue'
-export default {
-  components: {
-    Demo
-  },
-  setup() {
-    return {
-      Tabs1Demo
-    }
-  }
-}
+
 </script>
 
 <style lang="scss" scoped>

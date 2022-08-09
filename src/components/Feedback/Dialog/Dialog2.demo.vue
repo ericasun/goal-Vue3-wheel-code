@@ -9,26 +9,17 @@
 </template>
 
 <script lang="ts" setup>
-import {
-  Button,
-  openDialog
-} from "lib/index";
-import {
-  h
-} from 'vue'
-export default {
-  components: {
-    Button
-  }
-}
-export const showDialog = () => {
+import { Button, openDialog } from 'lib/index'
+import { h } from 'vue'
+
+const showDialog = () => {
   openDialog({
     title: h('strong', {}, '标题'),
     content: '你好',
-    ok() {
+    ok () {
       console.log('ok')
     },
-    cancel() {
+    cancel () {
       console.log('cancel')
     }
   })

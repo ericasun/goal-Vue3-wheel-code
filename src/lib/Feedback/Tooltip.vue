@@ -1,10 +1,9 @@
 <template>
 
 </template>
-<script lang="ts" setup="props, context">
-export default {
 
-};
+<script lang="ts" setup>
+
 </script>
 
 <style lang="scss">

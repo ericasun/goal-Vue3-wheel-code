@@ -1,19 +1,19 @@
 <demo>
 常规用法
-</demo> 
+</demo>
 
 <template>
-  
+
 </template>
 
 <script lang="ts">
 import {
-  Layout,
+  Layout
 } from 'lib/index'
 
 export default {
   components: {
     Layout
-  } 
+  }
 }
 </script>

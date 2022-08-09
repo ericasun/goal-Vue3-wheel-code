@@ -10,28 +10,21 @@
   </div>
 </template>
 
-<script lang="ts" setup="props, context">
+<script lang="ts" setup="context">
 import Tab from './Tab.vue'
-import {
-  computed,
-  ref,
-  watchEffect,
-  onMounted, SetupContext, Component
-} from 'vue'
+import { computed, ref, watchEffect, onMounted, SetupContext, Component} from 'vue'
 
-declare const props: {selected: string}
 declare const context: SetupContext
+// @ts-ignore
+const props = defineProps({
+  selected: {
+    type: String
+  }
+})
 
-export default {
-  props: {
-    selected: {
-      type: String
-    }
-  },
-}
-export const selectedItem = ref < HTMLDivElement > (null)
-export const indicator = ref < HTMLDivElement > (null)
-export const container = ref < HTMLDivElement > (null)
+const selectedItem = ref < HTMLDivElement > (null)
+const indicator = ref < HTMLDivElement > (null)
+const container = ref < HTMLDivElement > (null)
 
 onMounted(() => {
   watchEffect(() => {
@@ -52,19 +45,19 @@ onMounted(() => {
   })
 })
 
-export const defaults = context.slots.default()
+const defaults = context.slots.default()
 defaults.forEach((tag) => {
   if ((tag.type as Component).name !== Tab.name) {
     throw new Error('Tabs 子标签必须是 Tab')
   }
 })
-export const current = computed(() => {
+const current = computed(() => {
   return defaults.find(tag => tag.props.title === props.selected)
 })
-export const titles = defaults.map((tag) => {
+const titles = defaults.map((tag) => {
   return tag.props.title
 })
-export const select = (title: string) => {
+const select = (title: string) => {
   context.emit('update:selected', title)
 }
 </script>
@@ -73,7 +66,6 @@ export const select = (title: string) => {
 $blue: #40a9ff;
 $color: #333;
 $border-color: #d9d9d9;
-
 .gulu-tabs {
   &-nav {
     display: flex;

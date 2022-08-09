@@ -31,19 +31,9 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import Demo from 'components/Demo.vue'
 import Icon1Demo from './Icon1.demo.vue'
-export default {
-  components: {
-    Demo
-  },
-  setup() {
-    return {
-      Icon1Demo
-    }
-  }
-}
 </script>
 
 <style lang="scss" scoped>

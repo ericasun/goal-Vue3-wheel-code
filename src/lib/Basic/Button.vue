@@ -4,41 +4,27 @@
     <slot />
   </button>
 </template>
-<script lang="ts" setup="props">
+
+<script lang="ts" setup>
 import { computed } from "vue";
-declare const props: {
-  theme?: 'button' | 'text' | 'link';
-  size?: 'normal' | 'big' | 'small';
-  level?: 'normal' | 'main' | 'danger';
+export interface Props {
+  theme?: String;
+  size?: String;
+  level?: String;
   disabled: boolean;
   loading: boolean;
 }
-export default {
-  props: {
-    theme: {
-      type: String,
-      default: "button",
-    },
-    size: {
-      type: String,
-      default: "normal",
-    },
-    level: {
-      type: String,
-      default: "normal",
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-    loading: {
-      type: Boolean,
-      default: false
-    }
-  },
-};
+// @ts-ignore
+const props = withDefaults(defineProps<Props>(), {
+  theme:()=> ['button', 'text', 'link'],
+  size: () => ['normal', 'big','small'],
+  level: () => ['normal', 'main', 'danger'],
+  disabled: () => ['false', 'true'],
+  loading: () => ['false', 'true'],
+})
+
 const { theme, size, level } = props;
-export const classes = computed(() => {
+const classes = computed(() => {
   return {
     [`gulu-theme-${theme}`]: theme,
     [`gulu-size-${size}`]: size,

@@ -21,51 +21,37 @@
   </template>
 </template>
 
-<script lang="ts" setup="props, context">
-import { SetupContext } from 'vue';
+<script lang="ts" setup="context">
+// @ts-ignore
+import { SetupContext, withDefaults, defineProps } from 'vue';
 import Button from "lib/Basic/Button.vue";
-declare const props: {
-  visible: boolean;
-  closeOnClickOverlay: boolean; 
-  ok: () => boolean; 
-  cancel: () => void
+export interface Props {
+  visible: boolean
+  closeOnClickOverlay: boolean 
+  ok: boolean 
+  cancel: void;
 }
-declare const context: SetupContext
-export default {
-  props: {
-    visible: {
-      type: Boolean,
-      default: false
-    },
-    closeOnClickOverlay: {
-      type: Boolean,
-      default: true
-    },
-    ok: {
-      type: Function
-    },
-    cancel: {
-      type: Function
-    }
-  },
-  components: {
-    Button,
-  },
-};
-export const close = () => {
+
+const props = withDefaults(defineProps<Props>(), {
+  visible: () => ['false', 'true'],
+  closeOnClickOverlay: () => ['true', 'false']
+})
+
+declare const context: SetupContext;
+const close = () => {
   context.emit('update:visible', false)
 }
-export const onClickOverlay = () => {
+const onClickOverlay = () => {
   if (props.closeOnClickOverlay) {
     close()
   }
 }
-export const onClickOk = () => {
+const onClickOk = () => {
   if (props.ok && props.ok() !== false) {
     close()
   }
 }
-export const onClickCancel = () => {
+const onClickCancel = () => {
   props.cancel && props.cancel()
   close()
 }

@@ -50,7 +50,7 @@
           <router-link to="/doc/dialog">Dialog 对话框</router-link>
         </li>
          <li>
-          <router-link to="/doc/tooltip">Tooltip 文字提示</router-link> 
+          <router-link to="/doc/tooltip">Tooltip 文字提示</router-link>
         </li>
       </ol>
     </aside>
@@ -62,17 +62,12 @@
 </template>
 
 <script lang="ts" setup>
-import Topnav from "components/Topnav.vue";
+import Topnav from 'components/Topnav.vue'
 import {
   inject,
   Ref
-} from "vue";
-export default {
-  components: {
-    Topnav
-  },
-};
-export const menuVisible = inject < Ref < boolean >> ("menuVisible"); // get
+} from 'vue'
+// export const menuVisible = inject < Ref < boolean >> ("menuVisible"); // get
 </script>
 
 <style lang="scss" scoped>

@@ -4,16 +4,14 @@
   </button>
 </template>
 
-<script lang="ts" setup="props, context">
+<script lang="ts" setup="context">
 import { SetupContext } from "vue";
-declare const props: {value: boolean}
 declare const context: SetupContext
-export default {
-  props: {
-    value: Boolean,
-  },
-};
-export const toggle = () => {
+// @ts-ignore
+const props = defineProps({
+  value: Boolean,
+})
+const toggle = () => {
   context.emit("update:value", !props.value);
 };
 </script>

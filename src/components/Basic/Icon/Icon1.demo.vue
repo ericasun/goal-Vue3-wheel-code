@@ -1,6 +1,6 @@
 <demo>
 常规用法
-</demo> 
+</demo>
 
 <template>
   <table>
@@ -23,7 +23,7 @@
 
 <script lang="ts">
 import {
-  Icon,
+  Icon
 } from 'lib/index'
 
 export default {

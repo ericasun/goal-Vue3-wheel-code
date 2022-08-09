@@ -19,50 +19,32 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import Button from 'lib/Basic/Button.vue'
 import Icon from "lib/Basic/Icon/Icon.vue";
 import 'prismjs';
 import 'prismjs/themes/prism.css'
-import {
-  computed,
-  ref,
-  defineComponent
-} from 'vue';
+import { computed, ref} from 'vue';
+
 const Prism = (window as any).Prism
-export default defineComponent({
-  components: {
-    Button,
-    Icon
-  },
-  props: {
-    component: Object
-  },
-  setup(props) {
-    const html = computed(() => {
-      return Prism.highlight(props.component.__sourceCode, Prism.languages.html, 'html')
-    })
-    const showCode = () => codeVisible.value = true
-    const hideCode = () => codeVisible.value = false
-    const codeVisible = ref(false)
-    // 设置剪贴板内容
-    const copyCode = () => {
-      navigator.clipboard.writeText(props.component.__sourceCode).then(
-         function() {
-          alert('代码复制成功')
-        }
-      );
-    }
-    return {
-      Prism,
-      html,
-      codeVisible,
-      showCode,
-      hideCode,
-      copyCode
-    }
-  }
+// @ts-ignore
+const props = defineProps({
+  component: Object
 })
+const html = computed(() => {
+  return Prism.highlight(props.component.__sourceCode, Prism.languages.html, 'html')
+})
+const showCode = () => codeVisible.value = true
+const hideCode = () => codeVisible.value = false
+const codeVisible = ref(false)
+// 设置剪贴板内容
+const copyCode = () => {
+  navigator.clipboard.writeText(props.component.__sourceCode).then(
+      function() {
+      alert('代码复制成功')
+    }
+  );
+}
 </script>
 
 <style lang="scss" scoped>

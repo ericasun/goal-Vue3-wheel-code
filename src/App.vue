@@ -6,18 +6,18 @@
 import {
   ref,
   provide
-} from "vue";
+} from 'vue'
 import {
   router
-} from "./router";
+} from './router'
 console.log('打包打不出来')
-const width = document.documentElement.clientWidth;
-const menuVisible = ref(width <= 500 ? false : true);
+const width = document.documentElement.clientWidth
+const menuVisible = ref(!(width <= 500))
 
-provide("menuVisible", menuVisible); // set
+provide('menuVisible', menuVisible) // set
 router.afterEach(() => {
   if (width <= 500) {
-    menuVisible.value = false;
+    menuVisible.value = false
   }
-});
+})
 </script>
