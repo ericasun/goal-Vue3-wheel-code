@@ -61,7 +61,7 @@
 </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import Topnav from "components/Topnav.vue";
 import {
   inject,
@@ -71,13 +71,8 @@ export default {
   components: {
     Topnav
   },
-  setup() {
-    const menuVisible = inject < Ref < boolean >> ("menuVisible"); // get
-    return {
-      menuVisible
-    };
-  },
 };
+export const menuVisible = inject < Ref < boolean >> ("menuVisible"); // get
 </script>
 
 <style lang="scss" scoped>

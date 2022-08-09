@@ -6,7 +6,7 @@
   <Switch v-model:value="bool" />
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import {
   Switch
 } from 'lib/index'
@@ -16,12 +16,7 @@ import {
 export default {
   components: {
     Switch,
-  },
-  setup() {
-    const bool = ref(false)
-    return {
-      bool
-    }
   }
 }
+export const bool = ref(false) 
 </script>

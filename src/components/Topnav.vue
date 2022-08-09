@@ -12,7 +12,7 @@
 </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import {
   inject,
   Ref
@@ -28,16 +28,12 @@ export default {
       default: false
     }
   },
-  setup() {
-    const menuVisible = inject < Ref < boolean >> ("menuVisible"); // get
-    const toggleMenu = () => {
-      menuVisible.value = !menuVisible.value;
-    };
-    return {
-      toggleMenu
-    };
-  },
 };
+export const menuVisible = inject < Ref < boolean >> ("menuVisible"); // get
+export const toggleMenu = () => {
+    menuVisible.value = !menuVisible.value;
+};
+
 </script>
 
 <style lang="scss" scoped>

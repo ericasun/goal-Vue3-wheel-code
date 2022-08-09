@@ -25,6 +25,14 @@ export default defineConfig({
       '@' : path.resolve(__dirname, 'src'),
       "components": path.resolve(__dirname, "src/components"),
       "lib": path.resolve(__dirname, "src/lib")
-    },
+    }
   },
+  // build: {
+  //   // Template for index.html
+  //   index: path.resolve(__dirname, "./dist/index.html"),
+  //   // Paths
+  //   assetsRoot: path.resolve(__dirname, "./dist"),
+  //   assetsSubDirectory: "static",
+  //   assetsPublicPath: "./", //此处为修改的地方，这里加.
+  // },
 });

@@ -16,12 +16,7 @@ import {
 export default {
   components: {
     Switch,
-  },
-  setup() {
-    const bool = ref(false)
-    return {
-      bool
-    }
   }
 }
+export const bool = ref(false);
 </script>

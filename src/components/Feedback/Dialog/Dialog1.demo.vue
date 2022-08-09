@@ -17,7 +17,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import {
   Button,
   Dialog
@@ -30,22 +30,10 @@ export default {
   components: {
     Dialog,
     Button
-  },
-  setup() {
-    const x = ref(false)
-    const toggle = () => {
-      x.value = !x.value
-    }
-    const f1 = () => {
-      return false
-    }
-    const f2 = () => {}
-    return {
-      x,
-      toggle,
-      f1,
-      f2
-    }
   }
 }
+export const x = ref(false);
+export const toggle = () => {x.value = !x.value}
+export const f1 = () => {return false}
+export const f2 = () => {}
 </script>

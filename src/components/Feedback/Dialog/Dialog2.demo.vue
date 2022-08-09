@@ -3,12 +3,12 @@
 </demo>
 
 <template>
-<div>
-  <Button @click="showDialog">打开对话框</Button>
-</div>
+  <div>
+    <Button @click="showDialog">打开对话框</Button>
+  </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import {
   Button,
   openDialog
@@ -19,23 +19,18 @@ import {
 export default {
   components: {
     Button
-  },
-  setup() {
-    const showDialog = () => {
-      openDialog({
-        title: h('strong', {}, '标题'),
-        content: '你好',
-        ok() {
-          console.log('ok')
-        },
-        cancel() {
-          console.log('cancel')
-        }
-      })
-    }
-    return {
-      showDialog
-    }
   }
+}
+export const showDialog = () => {
+  openDialog({
+    title: h('strong', {}, '标题'),
+    content: '你好',
+    ok() {
+      console.log('ok')
+    },
+    cancel() {
+      console.log('cancel')
+    }
+  })
 }
 </script>

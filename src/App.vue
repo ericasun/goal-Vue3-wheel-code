@@ -10,7 +10,7 @@ import {
 import {
   router
 } from "./router";
-
+console.log('打包打不出来')
 const width = document.documentElement.clientWidth;
 const menuVisible = ref(width <= 500 ? false : true);
 

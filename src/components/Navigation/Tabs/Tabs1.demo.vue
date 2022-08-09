@@ -8,7 +8,7 @@
 </Tabs>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import {
   Tabs,
   Tab
@@ -20,12 +20,7 @@ export default {
   components: {
     Tabs,
     Tab
-  },
-  setup() {
-    const x = ref('导航2')
-    return {
-      x
-    }
   }
 }
+export const x = ref('导航2')
 </script>
