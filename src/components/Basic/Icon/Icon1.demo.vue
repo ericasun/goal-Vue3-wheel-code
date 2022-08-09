@@ -21,16 +21,8 @@
   </table>
 </template>
 
-<script lang="ts">
-import {
-  Icon
-} from 'lib/index'
-
-export default {
-  components: {
-    Icon
-  }
-}
+<script lang="ts" setup>
+import {Icon} from 'lib/index'
 </script>
 
 <style lang="scss" scoped>

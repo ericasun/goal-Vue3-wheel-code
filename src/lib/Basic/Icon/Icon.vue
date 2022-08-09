@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed} from 'vue'
+import {computed} from 'vue'
 export interface Props {
   name?: String;
   color?: String;
@@ -22,7 +22,6 @@ const svgClass = computed(() => {
   }
   return 'gulu-icon'
 })
-
 </script>
 
 <style lang="scss" scoped>
