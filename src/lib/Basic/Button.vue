@@ -8,19 +8,19 @@
 <script lang="ts" setup>
 import { computed } from "vue";
 export interface Props {
-  theme?: String;
-  size?: String;
-  level?: String;
-  disabled: Boolean;
-  loading: Boolean;
+  theme?: 'button'|'text'|'link';
+  size?: 'normal'|'big'|'small';
+  level?: 'normal'|'big'|'small';
+  disabled?: boolean;
+  loading?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  theme:()=> ['button', 'text', 'link'],
-  size: () => ['normal', 'big','small'],
-  level: () => ['normal', 'main', 'danger'],
-  disabled: () => ['false', 'true'],
-  loading: () => ['false', 'true'],
+  theme:'button',
+  size: 'normal',
+  level: 'normal',
+  disabled: false,
+  loading: false
 })
 const { theme, size, level } = props;
 const classes = computed(() => {
@@ -30,6 +30,11 @@ const classes = computed(() => {
     [`gulu-level-${level}`]: level,
   };
 });
+
+defineExpose({
+  disabled:Boolean,
+  loading:Boolean
+})
 </script>
 
 <style lang="scss" scope>
