@@ -21,25 +21,24 @@
   </template>
 </template>
 
-<script lang="ts" setup="context">
-
-import { SetupContext } from 'vue';
+<script lang="ts" setup>
 import Button from "lib/Basic/Button.vue";
 export interface Props {
-  visible: boolean
-  closeOnClickOverlay: boolean 
-  ok: boolean 
-  cancel: void;
+  visible: false|true,
+  closeOnClickOverlay?: true|false, 
+  ok: () => boolean; 
+  cancel: () => void
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  visible: () => ['false', 'true'],
-  closeOnClickOverlay: () => ['true', 'false']
+  visible: false,
+  closeOnClickOverlay: true
 })
-
-declare const context: SetupContext;
+const emit = defineEmits<{
+  (e: 'update:visible', visible: Boolean): void
+}>()
 const close = () => {
-  context.emit('update:visible', false)
+  emit('update:visible', false)
 }
 const onClickOverlay = () => {
   if (props.closeOnClickOverlay) {
