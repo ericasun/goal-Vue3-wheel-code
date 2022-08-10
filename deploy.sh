@@ -1,6 +1,6 @@
 # git rm -r --cached . ||
 git add . &&
-git commit -m "格式优化" &&
+git commit -m "修复switch" &&
 git branch -M master &&
 git remote rm origin &&
 git remote add origin git@github.com:ericasun/goal-Vue3-wheel-code.git &&

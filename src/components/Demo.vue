@@ -79,8 +79,8 @@ $border-color: #d9d9d9;
   }
   svg {
     grid-area: icon;
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     margin-left:8px;
   }
 }
