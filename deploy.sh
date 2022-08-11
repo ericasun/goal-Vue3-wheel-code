@@ -1,6 +1,6 @@
 # git rm -r --cached . ||
 git add . &&
-git commit -m "修复dialog" &&
+git commit -m "修复tab组件" &&
 git branch -M master &&
 git remote rm origin &&
 git remote add origin git@github.com:ericasun/goal-Vue3-wheel-code.git &&

@@ -10,18 +10,15 @@
   </div>
 </template>
 
-<script lang="ts" setup="context">
+<script lang="ts" setup>
 import Tab from './Tab.vue'
-import { computed, ref, watchEffect, onMounted, SetupContext} from 'vue'
-
-declare const context: SetupContext
+import { computed, ref, watchEffect, onMounted, useSlots} from 'vue'
 
 const props = defineProps({
   selected: {
     type: String
   }
 })
-
 const selectedItem = ref < HTMLDivElement > (null)
 const indicator = ref < HTMLDivElement > (null)
 const container = ref < HTMLDivElement > (null)
@@ -45,7 +42,8 @@ onMounted(() => {
   })
 })
 
-const defaults = context.slots.default()
+const slots = useSlots()
+const defaults = slots.default()
 defaults.forEach((tag) => {
   if ((tag.type as Component).name !== Tab.name) {
     throw new Error('Tabs 子标签必须是 Tab')
@@ -57,8 +55,11 @@ const current = computed(() => {
 const titles = defaults.map((tag) => {
   return tag.props.title
 })
+const emit = defineEmits<{
+  (e: 'update:selected', title: string): void
+}>()
 const select = (title: string) => {
-  context.emit('update:selected', title)
+  emit('update:selected', title)
 }
 </script>
 

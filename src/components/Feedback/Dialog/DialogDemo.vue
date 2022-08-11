@@ -63,7 +63,6 @@
 import Demo from 'components/Demo.vue'
 import Dialog1Demo from './Dialog1.demo.vue'
 import Dialog2Demo from './Dialog2.demo.vue'
-
 </script>
 
 <style lang="scss" scoped>
