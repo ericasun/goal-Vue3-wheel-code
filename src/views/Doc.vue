@@ -24,18 +24,18 @@
         <li>
           <router-link to="/doc/icon">Icon 图标</router-link>
         </li>
-        <li>
+        <!-- <li>
           <router-link to="/doc/layout">Layout 布局</router-link>
-        </li>
+        </li> -->
       </ol>
       <h3>Form 表单组件</h3>
       <ol>
         <li>
           <router-link to="/doc/switch">Switch 开关</router-link>
         </li>
-        <li>
+        <!-- <li>
           <router-link to="/doc/datepicker">Date Picker 日期选择器</router-link>
-        </li>
+        </li> -->
       </ol>
       <h3>Data 数据展示</h3>
       <h3>Navigation 导航</h3>
@@ -49,9 +49,9 @@
         <li>
           <router-link to="/doc/dialog">Dialog 对话框</router-link>
         </li>
-         <li>
+        <!-- <li>
           <router-link to="/doc/tooltip">Tooltip 文字提示</router-link>
-        </li>
+        </li> -->
       </ol>
     </aside>
     <main>
